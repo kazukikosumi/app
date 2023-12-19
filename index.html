@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/card0.jpg">
+    <title>AVOID CONCENTRATION</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+    <div id="combination"></div>
+    <div class="sideMenu">
+        <!-- Timerー -->
+        <div class="countDownBox" id="countDownBox">
+            <h3>Time Limit</h3>
+            <div class="countDownArea">
+                <p id="countDown">99</p>
+            </div>
+        </div>
+        <!-- counter -->
+        <div class="sameCountBox">
+            <h3>Same Card</h3>
+            <div class="sameCountArea">
+                <p id="sameCount">0</p>
+            </div>
+        </div>
+        <!-- retry -->
+        <div class="retryButtonBox" onclick="reteyButton()">
+            <div class="retryTextArea">
+                <p>Retry</p>
+            </div>
+        </div>
+        <div class="backMenuButtonBox" onclick="backMenuButton()">
+            <div class="backMenuTextArea">
+                <p>Start Menu</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="board">
+        <div class="cardarea1">
+            <div class="cardN" onclick="cardButton(1)">
+                <div class="front">
+                    <p id="card1"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(2)">
+                <div class="front">
+                    <p id="card2"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(3)">
+                <div class="front">
+                    <p id="card3"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(4)">
+                <div class="front">
+                    <p id="card4"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(5)">
+                <div class="front">
+                    <p id="card5"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="cardarea1">
+
+            <div class="cardN" onclick="cardButton(6)">
+                <div class="front">
+                    <p id="card6"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(7)">
+                <div class="front">
+                    <p id="card7"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(8)">
+                <div class="front">
+                    <p id="card8"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(9)">
+                <div class="front">
+                    <p id="card9"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(10)">
+                <div class="front">
+                    <p id="card10"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="cardarea1">
+
+            <div class="cardN" onclick="cardButton(11)">
+                <div class="front">
+                    <p id="card11"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+
+            <div class="cardN" onclick="cardButton(12)">
+                <div class="front">
+                    <p id="card12"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(13)">
+                <div class="front">
+                    <p id="card13"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(14)">
+                <div class="front">
+                    <p id="card14"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(15)">
+                <div class="front">
+                    <p id="card15"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="cardarea1">
+            <div class="cardN" onclick="cardButton(16)">
+                <div class="front">
+                    <p id="card16"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(17)">
+                <div class="front">
+                    <p id="card17"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(18)">
+                <div class="front">
+                    <p id="card18"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(19)">
+                <div class="front">
+                    <p id="card19"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+            <div class="cardN" onclick="cardButton(20)">
+                <div class="front">
+                    <p id="card20"></p>
+                </div>
+                <div class="back">
+                    <img src="" alt="" />
+                </div>
+                <div class="ngcard">
+                    <img src="" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sideMenu2">
+        <div class="life_area">
+            <div class="life_box">
+                <img src="./img/heart2.png" alt="">
+                <img src="./img/heart.png" alt="" id="life1">
+            </div>
+            <div class="life_box">
+                <img src="./img/heart2.png" alt="">
+                <img src="./img/heart.png" alt="" id="life2">
+            </div>
+            <div class="life_box">
+                <img src="./img/heart2.png" alt="">
+                <img src="./img/heart.png" alt="" id="life3">
+            </div>
+            <div class="life_box">
+                <img src="./img/heart2.png" alt="">
+                <img src="./img/heart.png" alt="" id="life4">
+            </div>
+        </div>
+        <div class="tips_area">
+            <div class="tips_box">
+                <h3>Tips1</h3>
+                <p id="tips_text"></p>
+            </div>
+            <div class="tips_box">
+                <h3>Tips2</h3>
+                <p id="tips_text2"></p>
+            </div>
+            <div class="tips_box">
+                <h3>Tips3</h3>
+                <p id="tips_text3"></p>
+            </div>
+        </div>
+        <div class="manual_area">
+            <h3>Tips解放条件</h3>
+            <div class="manual_box">
+                <p>Tips1:Same Card = 2</p>
+                <p>Tips2:Same Card = 6</p>
+                <p>Tips3:Same Card = 10</p>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+    <!-- ゲームスタート画面 -->
+    <div class="gameStartMenu" id="gameStartMenu">
+        <div class="gameStartMenu_box">
+            <h2 onclick="StartMenuButton()">Game Start</h2>
+            <h2 onclick="descriptionButton()">Description</h2>
+            <h2 onclick="creditButton()">Credit</h2>
+        </div>
+    </div>
+    <!-- Description -->
+    <div class="description" id="description">
+        <div class="description_box">
+            <img src="./img/screen.png" alt="">
+            <div class="description_text_box">
+                <h2>基本ルール</h2>
+                <p>・基本は神経衰弱</p>
+                <p>・同じ組み合わせを捲れればライフが1回復</p>
+                <p>・異なる組み合わせを捲るとライフが1減少</p>
+            </div>
+        </div>
+        <div class="description_box2">
+            <div class="description_text_box">
+                <h2>Game Clear条件</h2>
+                <p>・NGの組み合わせ以外を全て捲る。</p>
+            </div>
+            <div class="description_text_box">
+                <h2>Game Over条件</h2>
+                <p>・ライフが0になる。</p>
+                <p>・Time Limitが0になる。</p>
+                <p>・NGの組み合わせを1度に2枚捲る。</p>
+            </div>
+            <div class="description_text_box">
+                <h2>NG組み合わせ</h2>
+                <h2>Tips(ヒント)解放条件</h2>
+                <p>・Tips1:Same Card = 2</p>
+                <p>・Tips2:Same Card = 6</p>
+                <p>・Tips3:Same Card = 10</p>
+            </div>
+        </div>
+        <div class="close_button">
+            <p onclick="closeButton2()">Close</p>
+        </div>
+    </div>
+    <!-- credit -->
+    <div class="credit" id="credit">
+        <h1>Credit</h1>
+        <div class="credit_area">
+            <div class="credit_box">
+                <img src="./img/card0.jpg" alt="" class="bg_credit">
+                <a
+                    href="https://jp.freepik.com/free-vector/hand-drawn-mystical-tarot-mobile-wallpaper_21862415.htm#page=2&query=%E3%82%BF%E3%83%AD%E3%83%83%E3%83%88&position=35&from_view=keyword&track=sph&uuid=7b1ba66f-9fb3-47f3-9e6a-e69f8ec905bb">著作者：pikisuperstar</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/card1.jpg" alt="" class="bg_credit">
+                <a
+                    href="https://jp.freepik.com/free-photo/view-of-futuristic-mystical-other-worldly-sky_81503073.htm#query=%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BC&position=26&from_view=keyword&track=sph&uuid=42cd1b7b-b062-4776-a46d-f8dbf32ca1dc">Freepik</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/card2.jpg" alt="" class="bg_credit">
+                <a
+                    href="https://jp.freepik.com/free-photo/magical-nighttime-landscape-with-sparkly-lights_38688534.htm#query=%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BC&position=30&from_view=keyword&track=sph&uuid=42cd1b7b-b062-4776-a46d-f8dbf32ca1dc">Freepik</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/card3.jpg" alt="" class="bg_credit">
+                <a
+                    href="https://jp.freepik.com/free-photo/landscape-scenery-with-magenta-nature_58597555.htm#page=2&query=%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BC&position=16&from_view=keyword&track=sph&uuid=42cd1b7b-b062-4776-a46d-f8dbf32ca1dc">Freepik</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/card4.jpg" alt="" class="bg_credit">
+                <a
+                    href="https://jp.freepik.com/free-photo/earth-seen-from-space_47990961.htm#page=3&query=%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BC&position=29&from_view=keyword&track=sph&uuid=42cd1b7b-b062-4776-a46d-f8dbf32ca1dc">Freepik</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/card5.jpg" alt="" class="bg_credit">
+                <a
+                    href="https://jp.freepik.com/free-photo/futuristic-moon-background_83186192.htm#page=2&query=%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BC&position=21&from_view=keyword&track=sph&uuid=0fc36887-0f24-4bae-aabe-c7c6c23b5d6d">Freepik</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/card7.jpg" alt="" class="bg_credit">
+                <a
+                    href="https://jp.freepik.com/free-photo/futuristic-moon-background_83186211.htm#page=2&query=%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BC&position=48&from_view=keyword&track=sph&uuid=db343369-c154-419b-a8da-fa076fca8ef6">Freepik</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/card8.jpg" alt="" class="bg_credit">
+                <a
+                    href="https://jp.freepik.com/free-photo/futuristic-moon-background_83186254.htm#query=%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BC&position=6&from_view=keyword&track=sph&uuid=db343369-c154-419b-a8da-fa076fca8ef6">Freepik</a>
+            </div>
+        </div>
+        <div class="credit_area">
+            <div class="credit_box">
+                <img src="./img/card9.jpg" alt="" class="bg_credit">
+                <a
+                    href="https://jp.freepik.com/free-photo/futuristic-moon-background_83186226.htm#page=2&query=%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BC&position=13&from_view=keyword&track=sph&uuid=f9b4b64c-c8ad-4a95-bcc5-d1672b6239c7">Freepik</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/card10.jpg" alt="" class="bg_credit">
+                <a
+                    href="https://jp.freepik.com/free-photo/futuristic-moon-background_83186184.htm#page=2&query=%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BC&position=35&from_view=keyword&track=sph&uuid=f9b4b64c-c8ad-4a95-bcc5-d1672b6239c7">Freepik</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/StartBackground.jpg" alt="" class="bg_credit2">
+                <a
+                    href="https://jp.freepik.com/free-photo/full-moon-fantasy-landscape_81091900.htm#query=%E3%83%95%E3%82%A1%E3%83%B3%E3%82%BF%E3%82%B8%E3%83%BC&position=0&from_view=keyword&track=sph&uuid=ed92204e-2783-431d-9ca7-76ca12f1121f">著作者：vector_corp</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/table1.jpg" alt="" class="bg_credit2">
+                <a
+                    href="https://jp.freepik.com/free-vector/green-casino-poker-table-texture-game-background_48197468.htm#query=%E3%82%AB%E3%82%B8%E3%83%8E%20%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&position=42&from_view=keyword&track=ais&uuid=c8e9876e-f070-44cd-9352-fb659f889f16">著作者：upklyak</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/vintage-grunge2.jpg" alt="" class="bg_credit2">
+                <a
+                    href="https://jp.freepik.com/free-photo/vintage-grunge_3753883.htm#page=2&query=%E8%83%8C%E6%99%AF&position=27&from_view=search&track=sph&uuid=b510853d-303d-4cac-bc81-144b00e137bf">著作者：kjpargeter</a>
+            </div>
+            <div class="credit_box">
+                <img src="./img/gameclear.jpg" alt="" class="bg_credit2">
+                <a href="https://jp.freepik.com/free-photo/breathtaking-shot-of-the-sea-under-a-dark-and-purple-sky-filled-with-stars_11342925.htm#query=%E6%98%9F%E7%A9%BA&position=2&from_view=search&track=sph&uuid=ecca9370-d117-42bf-ae35-b5efa5988d4f">著作者：wirestock</a>
+            </div>
+        </div>
+        <div class="close_button">
+            <p onclick="closeButton()">Close</p>
+        </div>
+    </div>
+    <!-- ゲームクリア画面 -->
+    <div class="gameclear" id="gameclear">
+        <h1>Congratulations!</h1>
+        <div class="score_area">
+            <div class="score_box2">
+                <h2>TOTAL SCORE:</h2>
+                <div id="TotalScorebox1" class="box totalScorebox">
+                    <p><span class="count-up count-size" id="TotalTime"></span></p>
+                </div>
+                <div class="totalScorebox">
+                    <p id="clearTime_dummy3" class="clearTime_dummy">0</p>
+                </div>
+            </div>
+            <div class="score_box">
+                <p>CLEAR TIME:</p>
+                <div id="clearTimebox" class="box">
+                    <p><span class="count-down count-size" id="clearTime">0</span></p>
+                </div>
+                <div>
+                    <p id="clearTime_dummy" class="clearTime_dummy"></p>
+                </div>
+            </div>
+
+            <div class="score_box">
+                <p>LIFE:</p>
+                <div id="clearTimebox2" class="box">
+                    <p><span class="count-down count-size" id="clearTime2">0</span></p>
+                </div>
+                <div>
+                    <p id="clearTime_dummy2" class="clearTime_dummy"></p>
+                </div>
+            </div>
+        </div>
+        <div class="gameclear_menu">
+            <p onclick="reteyButton3()">RETRY</p>
+        </div>
+    </div>
+    <!-- 終了画面 -->
+    <div class="gameover" id="gameover">
+        <h1>GAME OVER</h1>
+        <div class="gameover_menu">
+            <p onclick="reteyButton2()">RETRY</p>
+            <p onclick="backMenuButton2()">START MENU</p>
+        </div>
+    </div>
+    <!-- ゲームスタート/リトライ画面 -->
+    <div class="gamestart" id="gamestart">
+        <!-- Timerー -->
+        <div class="countDownBox2">
+            <p id="countDown2"></p>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
